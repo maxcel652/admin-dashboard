@@ -18,7 +18,7 @@ const Sidebar = ({navigate, handleLogout}) => {
       setIsSidebarOpen(!isSidebarOpen);
     };
   
-    // Function to close sidebar (useful after navigation on mobile)
+    // Function to close sidebar 
     const closeSidebar = () => {
       setIsSidebarOpen(false);
     };
