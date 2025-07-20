@@ -1,0 +1,126 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Max width as per design */
+    position: relative;
+    max-height: 90vh; /* Max height to prevent overflow on smaller screens */
+    overflow-y: auto; /* Scroll if content is too long */
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .modal-close-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease;
+  }
+  
+  .modal-close-button:hover {
+    color: #333;
+  }
+  
+  .modal-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for input fields */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .modal-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-form .form-group.full-width {
+      grid-column: 1 / -1; /* Make this group span all columns */
+  }
+  
+  .modal-form label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .modal-form input[type="text"],
+  .modal-form input[type="email"],
+  .modal-form input[type="tel"],
+  .modal-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Take full width of its grid column */
+    transition: border-color 0.2s ease;
+  }
+  
+  .modal-form input:focus,
+  .modal-form textarea:focus {
+    border-color: #007bff; /* Highlight on focus */
+    outline: none;
+  }
+  
+  .modal-form textarea {
+    min-height: 80px; /* Minimum height for text areas */
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  .modal-actions {
+    grid-column: 1 / -1; /* Span entire width */
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    margin-top: 25px;
+  }
+  
+  .modal-actions button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .modal-actions button.primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-actions button.primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-1px); /* Slight lift */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+      .modal-form {
+          grid-template-columns: 1fr; 
+      }
+  }

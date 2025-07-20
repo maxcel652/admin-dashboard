@@ -1,0 +1,178 @@
+.login-container {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: #f4f6f9; /* Background color of the page */
+    overflow: hidden; /* Prevent any internal overflow from causing scrollbars */
+}
+
+.login-form-panel {
+    flex: 1; /* Takes half the width on large screens */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.login-design-panel {
+    flex: 1; /* Takes the other half the width on large screens */
+    background-color: #f0f2f5; /* A light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.geometric-design-image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-logo {
+    width: 100px; /* Adjust logo size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 0;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 350px; /* Max width for the form itself */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-input-wrapper input {
+    padding-right: 40px; /* Make space for the eye icon */
+}
+
+.password-input-wrapper span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.login-error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Responsive Adjustments for Login Page --- */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Stack panels on smaller screens */
+    }
+
+    .login-form-panel {
+        flex: none; /* No flex grow */
+        width: 100%;
+        padding: 30px 20px;
+        box-shadow: none; /* Remove shadow when stacked */
+    }
+
+    .login-design-panel {
+        flex: none; /* No flex grow */
+        width: 100%;
+        min-height: 200px; /* Give some height to the design panel */
+        padding: 20px;
+    }
+
+    .login-header h1 {
+        font-size: 2rem;
+    }
+
+    .login-header p {
+        font-size: 1rem;
+    }
+
+    .login-form {
+        max-width: 300px; /* Slightly smaller max-width for forms on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form-panel {
+        padding: 20px 15px;
+    }
+    .login-header h1 {
+        font-size: 1.8rem;
+    }
+    .login-logo {
+        width: 80px;
+    }
+}

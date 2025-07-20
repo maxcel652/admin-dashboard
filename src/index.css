@@ -1,0 +1,65 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Or a font similar to the design */
+    background-color: #f0f2f5; /* Light grey background from your design */
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  #root {
+    display: flex; /* Make the root element a flex container */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+  }
+  
+  /* --- General Container Styles (for the main content area) --- */
+  .content-area {
+    flex: 1; /* Allow the content area to grow and take remaining space */
+    padding: 20px;
+  }
+  
+  .main-content-card {
+    background-color: #fff; /* White background for the main cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space below header */
+  }
+  
+  /* Basic Link and Button Styles (placeholders for now) */
+  a {
+    text-decoration: none;
+    color: inherit; /* Inherit color unless specified */
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button.primary {
+      background-color: #1A7AE0; /* Example blue */
+      color: white;
+  }
+  
+  button.secondary {
+      background-color: #6c757d; /* Example grey */
+      color: white;
+  }
+  
+  /* Placeholder for focus outlines, important for accessibility */
+  *:focus {
+    outline: 2px solid rgba(0, 123, 255, 0.5); /* A common focus style */
+    outline-offset: 2px;
+  }

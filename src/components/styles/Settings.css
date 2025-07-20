@@ -1,0 +1,159 @@
+.settings-container {
+    padding: 20px;
+  }
+  
+  .settings-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  .user-info-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-info-card h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .profile-picture-section {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-picture-section .current-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #ddd;
+  }
+  
+  .profile-picture-section .current-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-picture-section .current-avatar span {
+      font-size: 3rem;
+      color: #666;
+  }
+  
+  .profile-picture-section input[type="file"] {
+    display: none; /* Hide default file input */
+  }
+  
+  .profile-picture-section .custom-file-upload {
+    border: 1px solid #007bff;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #e0f2fe;
+    color: #007bff;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .profile-picture-section .custom-file-upload:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .settings-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+    gap: 20px;
+  }
+  
+  .settings-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .settings-form .form-group.full-width {
+      grid-column: 1 / -1; /* Make this group span all columns */
+  }
+  
+  .settings-form label {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .settings-form input[type="text"],
+  .settings-form input[type="password"],
+  .settings-form input[type="email"],
+  .settings-form input[type="tel"] {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.2s ease;
+  }
+  
+  .settings-form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .settings-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+  
+  .settings-actions button.primary {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .settings-actions button.primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .settings-form {
+          grid-template-columns: 1fr; /* Single column on smaller screens */
+      }
+      .settings-container h2 {
+        font-size: 1.3rem;
+
+      }
+
+      .user-info-card h3 {
+        font-size: 1.1rem;
+      }
+
+      .profile-picture-section {
+        align-items:start;
+        
+      }
+
+
+      
+  }
