@@ -80,6 +80,7 @@ function AppContent() {
     const protectedPaths = ['/', '/dashboard', '/interns', '/settings']; // Define protected paths
     if (!isLoggedIn && protectedPaths.some(path => location.pathname.startsWith(path))) {
       navigate('/login');
+      
     }
   }, [isLoggedIn, navigate, location.pathname]);
   return (
