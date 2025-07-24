@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles/Login.css'; 
-import logo from '../assets/logo.png'; // Assuming your logo is here
+import logo from '../assets/logo.png'; 
 
 
 const Login = ({ setIsLoggedIn }) => {
@@ -13,13 +13,12 @@ const Login = ({ setIsLoggedIn }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setError(''); // Clear previous errors
+    setError(''); 
 
-    // Basic client-side validation (replace with actual auth logic later)
     if (email === 'admin@example.com' && password === 'password') {
-      setIsLoggedIn(true); // Set login status to true
-      localStorage.setItem('isLoggedIn', 'true'); // Persist login state
-      navigate('/dashboard'); // Redirect to dashboard
+      setIsLoggedIn(true);
+      localStorage.setItem('isLoggedIn', 'true'); 
+      navigate('/dashboard'); 
     } else {
       setError('Invalid email or password. Please try again.');
     }
@@ -56,7 +55,6 @@ const Login = ({ setIsLoggedIn }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              {/* You might add a password visibility toggle icon here */}
               <span>👁️</span> {/* Placeholder for an eye icon */}
             </div>
           </div>
